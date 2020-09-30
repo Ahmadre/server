@@ -77,7 +77,7 @@ public class UserController {
 
         userRepository.delete(user);
 
-        return ResponseEntity.status(Response.SC_OK).body(user);
+        return ResponseEntity.ok(user);
     }
 
     @PostMapping("/{email}/update")
@@ -103,6 +103,6 @@ public class UserController {
         );
         user = userRepository.save(user);
 
-        return ResponseEntity.status(Response.SC_OK).body(user);
+        return ResponseEntity.ok(user);
     }
 }
