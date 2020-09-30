@@ -44,6 +44,11 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<dependency>
+			<groupId>org.glassfish</groupId>
+			<artifactId>javax.persistence</artifactId>
+			<version>3.0-Prelude-Embedded-b14</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -51,6 +56,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<finalName>ng-server</finalName>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
