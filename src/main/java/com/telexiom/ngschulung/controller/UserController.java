@@ -51,10 +51,9 @@ public class UserController {
             return ResponseEntity.badRequest().body("Missing required fields");
         }
 
-
         User user = new User(
                 req.email,
-                req.language,
+                !req.language.isEmpty() ? req.language : "en_GB",
                 req.firstname,
                 req.lastname,
                 req.birthdate,
