@@ -11,6 +11,7 @@ import com.telexiom.ngschulung.repositories.UserRepository;
 import java.util.List;
 import java.util.Map;
 
+@CrossOrigin(origins = {"http://localhost:4200", "https://ngtelexiom.web.app", "https://ngtelexiom.firebaseapp.com"}, maxAge = 3600)
 @RestController
 @RequestMapping("/users")
 public class UserController {
